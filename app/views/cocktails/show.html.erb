@@ -2,6 +2,11 @@
 
     <div class="card-cocktail">
       <h3><%= @cocktail.name.upcase %></h3>
+      <ul><% @cocktail.doses.each do |dose| %></ul>
+      <li><%= dose.description %> <%= link_to "Delete this dose", dose_path(dose), method: :delete, class: 'btn btn-primary btn-xs' %></li>
+      <% end %>
     </div>
 
+<%= link_to "Add dose", new_cocktail_dose_path(@cocktail), class: 'btn btn-primary' %>
 </div>
+

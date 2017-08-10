@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6 col-xs-offset-3">
+      <%= simple_form_for [ @cocktail, @dose ] do |f| %>
+        <%= f.input :description, error: 'Description is mandatory, please specify one' %>
+        <%= f.association :ingredient %>
+        <%= f.button :submit %>
+      <% end %>
+    </div>
+  </div>
+</div>
