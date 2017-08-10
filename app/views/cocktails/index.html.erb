@@ -1,0 +1,11 @@
+<div class="container">
+
+  <% @cocktails.each do |cocktail|  %>
+    <div class="card-cocktail">
+      <h3><%= link_to "#{cocktail.name.upcase}", cocktail_path(cocktail) %></h3>
+    </div>
+  <% end %>
+
+<%= link_to "New cocktail", new_cocktail_path, class: 'btn btn-primary' %>
+
+</div>
